@@ -11,12 +11,11 @@
               v-for="(item,index) in prizeList"
               :key="index"
               :style="item.style"
-            > 
-            <div class="prize-type">{{item.name}}</div>
+            >
               <div class="prize-pic">
                 <img :src="item.icon" />
               </div>
-             
+              <div class="prize-type">{{item.name}}</div>
             </div>
           </div>
         </div>
@@ -134,9 +133,9 @@ export default {
         // 记录每个奖项的角度范围
         angleList.push((i * average) + half )
       })
-      console.log(list)
+
       this.angleList = angleList
-      console.log(this.angleList)
+
       return list
     },
     beginRotate() {
@@ -150,7 +149,7 @@ export default {
 
       // 随机获取下标
       this.index = this.random(this.prizeList.length - 1);
-      console.log(this.index)
+
       // 减少剩余抽奖次数
       this.count--
   
@@ -230,7 +229,7 @@ export default {
   z-index: 1;
   width: 100%;
   height: 100%;
-  background: url("../assets/img/555.png") no-repeat center top;
+  background: url("../assets/img/draw_wheel.png") no-repeat center top;
   background-size: 100%;
   color: #fff;
 }
